@@ -10,3 +10,82 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white
 Text Domain: basic
 */
+
+/**
+ * THEME STYLES
+ *
+ * Notes:
+ *
+ * Font size uses rems. See http://gregrickaby.com/using-the-golden-ratio-and-rems/
+ *
+ * Font size base (FSB) = 16px
+ * Line height base (LHB) = 28px
+ * Font size and line height were computed using http://www.pearsonified.com/typography/
+ *
+ * Element line height = LHB / element's font size
+ */
+
+/**
+ * Set all element box sizing to border box
+ */
+html {
+	box-sizing: border-box;
+}
+/* Cascade the box-sizing */
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/**
+ * Clear floats
+ */
+.clearfix:after,
+.container:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clear{
+	clear:both
+}
+
+/* Screen reader only texts - taken from Bootstrap 3.x */
+.screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+
+/**
+ * Font Assignments
+ */
+body {
+	font-family: Calibri, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Cambria, Georgia, serif;
+}
+
+pre {
+	font-family: "Courier New", monospace;
+}
+
+
+/* Typography */
+html {
+	font-size: 10px; /* For easy px to rem conversion. Now 1.0rem = 10px */
+	line-height: 1.75;
+}
+body {
+	font-size: 16px; /* Fallback for IE8 */
+	font-size: 1.6rem;
+	color: #333333;
+}
